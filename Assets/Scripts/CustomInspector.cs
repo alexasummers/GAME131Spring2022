@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+//Code from Unity Documentation (https://docs.unity3d.com/Manual/editor-CustomEditors.html)
 [CustomEditor(typeof(LookAtPoint))]
 [CanEditMultipleObjects]
 public class CustomInspector : Editor

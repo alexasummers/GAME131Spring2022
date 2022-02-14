@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Code from (https://docs.unity3d.com/Manual/editor-CustomEditors.html)
 [ExecuteInEditMode]
 public class LookAtPoint : MonoBehaviour
 {
@@ -12,3 +13,4 @@ public class LookAtPoint : MonoBehaviour
         transform.LookAt(lookAtPoint);
     }
 }
+
