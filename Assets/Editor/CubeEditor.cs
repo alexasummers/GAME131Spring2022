@@ -18,17 +18,16 @@ public class CubeEditor : Editor
         {
             CubeStats cube = cubeStatsSP.objectReferenceValue as CubeStats;
 
-            EditorGUILayout.LabelField(cube.displayName + " Stats");
+            EditorGUILayout.LabelField("Name:", cube.displayName);
             EditorGUILayout.PropertyField(cubeStatsSP);
             EditorGUILayout.Space();
             cube.strength = EditorGUILayout.IntField("Strength: ", cube.strength);
             cube.body = EditorGUILayout.IntField("Body: ", cube.body);
             cube.will = EditorGUILayout.IntField("Will: ", cube.will);
             EditorGUILayout.Space();
-            int health = ((cube.strength + cube.body + cube.will) / 3) * 4;
+            int health =((cube.strength + cube.body + cube.will) /3) * 4;
             EditorGUILayout.LabelField("Calculated Stats: ");
             EditorGUILayout.LabelField("Health: " + health);
         }
-        serializedObject.ApplyModifiedProperties();
     }
 }

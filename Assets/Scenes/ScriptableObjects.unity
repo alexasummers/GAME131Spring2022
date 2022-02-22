@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060e0221e8d1c0f41b9355e081ab7d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
+  cube: {fileID: 11400000, guid: ef6552bd700078d41a8b9f92dfbccd71, type: 2}
   health: 0
 --- !u!65 &397157713
 BoxCollider:
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 060e0221e8d1c0f41b9355e081ab7d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 11400000, guid: 47241c99f25bfe84cb4a25a7cf9f2a91, type: 2}
+  cube: {fileID: 11400000, guid: 888a3d19334236b42a719b82b4b99435, type: 2}
   health: 0
 --- !u!65 &1607231368
 BoxCollider:
