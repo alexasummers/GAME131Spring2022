@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d4935b137bc654d893ced97277a462, type: 3}
-  m_Name: PurpleCube
+  m_Script: {fileID: 11500000, guid: 91770d9f86f6223418ddaf9c1c6f45f3, type: 3}
+  m_Name: Purple
   m_EditorClassIdentifier: 
-  strength: 10
-  body: 20
-  will: 30
-  displayName: Purple!
-  stat: Third Stat!
+  strength: 4
+  body: 4
+  will: 4
+  displayName: I'm purple!
+  stat: Here is a stat!

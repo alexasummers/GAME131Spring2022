@@ -6,9 +6,8 @@ using UnityEngine;
 
 public class CubeStats : ScriptableObject
 {
-    public int strength = 1;
-    public int body = 1;
-    public int will = 1;
-    public string displayName = "NOT SET";
-    public string stat = "NOT SET";
+   public int strength = 1;
+   public int body = 1;
+   public int will = 1;
+   public string displayName = "NOT SET";
 }

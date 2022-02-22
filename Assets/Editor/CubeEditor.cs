@@ -28,10 +28,6 @@ public class CubeEditor : Editor
             int health = ((cube.strength + cube.body + cube.will) / 3) * 4;
             EditorGUILayout.LabelField("Calculated Stats: ");
             EditorGUILayout.LabelField("Health: " + health);
-            EditorGUILayout.Space();
-            EditorGUILayout.LabelField("Stat: ");
-            SerializedProperty stat = serializedObject.FindProperty("stat");
-            stat.stringValue = EditorGUILayout.TextField("Stat ", stat.stringValue);
         }
         serializedObject.ApplyModifiedProperties();
     }

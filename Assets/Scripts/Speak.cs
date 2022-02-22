@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Speak : MonoBehaviour
 {
+
     public Dialogue dialogue;
     public Text dialogueText;
 

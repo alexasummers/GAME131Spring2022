@@ -2,74 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Source: Beginning Editor Scripting || Benny Kok (ISBN 1-4842-7166-1)
 
-[HelpURL("https://github.com/alexasummers/GAME131Spring2022")]
-//[AddComponentMenu("ClickMe/ClickMeAgain!")]
-[AddComponentMenu("")]
+//[HelpURL("https://github.com/alexasummers/GAME131Spring2022")]
 
 //[ExecuteAlways]
 
-[RequireComponent(typeof(Rigidbody))]
+//[RequireComponent(typeof(Rigidbody))]
 public class InspectorAttributes : MonoBehaviour
 {
-    [Header("Player Stats")]
-    [Range(0, 100)]
-    public float health;
-    [Range(0, 50)]
-    public float attackPt;
+   [Header("Player Stats")]
+   [Range(0,100)]
+   public float health;
+   [Range(0, 50)]
+   public float attackPt;
 
-    [Header("Player Description")]
-    [Multiline(4)]
-    public string shortDescription;
-    [TextArea(4, 6)]
-    public string longDescription;
+   [Header("Enemy Stats")]
+   public float enemyHealth;
 
-    [Tooltip("Should I choose true or false?")]
-    public bool checkForTrue;
+   [Header("Player Description")]
+   [Multiline(4)]
+   public string shortDescription;
+   [TextArea(4, 6)]
+   public string longDescription;
 
-    [HideInInspector]
-    public bool hiddenBool;
+   [Tooltip("Should I pick true or false?")]
+   public bool checkForTrue;
 
-    [Space, SerializeField]
-    private bool privateSerialiedField;
+   [Space, SerializeField]
+   private bool privateSerializedField;
 
-    [ContextMenu("Randomize Player Stats")]
-    public void RandomizePlayerStats()
-    {
-        health = Random.Range(0, 101);
-        attackPt = Random.Range(0, 51);
-    }
+   [HideInInspector]
+   public bool publicSerializedField;
 
-    void Update()
-    {
-        Debug.Log("I am printing because I always execute!");
-    }
+   [ContextMenu("Randomize Player Stats")]
+   public void RandomizePlayerStats() {
+       health = Random.Range(0,101);
+       attackPt = Random.Range(0,51);
+   }
 
-    private void OnValidate()
-    {
-        //Example validation use case
-        if (attackPt > health)
-        {
-            Debug.Log("Hp can't be larger than attack point.");
-        }
-    }
+   void Update() {
+       Debug.Log("I am printing!");
+   }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, 5);
-    }
+   private void OnValidate()
+   {
+       if (attackPt > health)
+       {
+           Debug.Log("Hp can't be larger than attack point");
+       }
+   }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawSphere(transform.position, 2);
-    }
+   private void OnDrawGizmos()
+   {
+       Gizmos.DrawWireSphere(transform.position, 5);
+   }
 
-    private void Reset()
-    {
-        health = 10;
-        attackPt = 5;
-        shortDescription = "Default Description";
-    }
+   private void OnDrawGizmosSelected()
+   {
+       Gizmos.DrawSphere(transform.position, 2);
+   }
+
+   private void Reset()
+   {
+       health = 10;
+       attackPt = 5;
+       shortDescription = "Default!";
+   }
 }
-
